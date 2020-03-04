@@ -10,7 +10,7 @@
 			<input id="quantidade"  name="quantidade" type='text'>		
 			<input type="submit" value="Inserir"/>
 		</form>
-		
+		<H3>Presentes</h3>
 			<?php
 				$connect = new mysqli("127.0.0.1", "admin", "Xurumela@19", "Empresa");
 			
@@ -21,7 +21,7 @@
 						if($resultset->num_rows == 0){
 						
 						}else{
-							echo("<table>");
+							echo("<table border=1>");
 								echo("<tr>");
 									echo("<th>Produto</th>");
 									echo("<th>Quantidade</th>");

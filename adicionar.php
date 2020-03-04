@@ -4,11 +4,11 @@
 	$quantidade = $_POST['quantidade'];
 	echo('Recebi '.$quantidade.' do produto '.$produto." foram inseridos<br><br>");
 	
-	$connect = mysqli_connect("127.0.0.1", "admin", "Xurumela@19", "Empresa");
+	$connect = new mysqli("127.0.0.1", "admin", "Xurumela@19", "Empresa");
 
 	if($connect){
 		$query = "INSERT INTO Estoque (produto,quantidade)VALUES('".$produto."','".$quantidade."')";
-		mysqli_query($connect,$query);
+		$connect->query($query);
 		mysqli_close($connect);
 	}
 
